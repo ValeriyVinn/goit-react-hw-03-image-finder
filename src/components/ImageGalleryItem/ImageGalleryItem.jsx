@@ -1,7 +1,7 @@
 import css from './ImageGalleryItem.module.css';
 import { React, Component } from 'react';
 import { Modal } from '../Modal/Modal';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 export class ImageGalleryItem extends Component {
   state = { showModal: false };
@@ -31,3 +31,9 @@ export class ImageGalleryItem extends Component {
     );
   }
 }
+
+ImageGalleryItem.propTypes = {
+  tags: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  largeImageURL: PropTypes.string.isRequired,
+};
